@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.views.generic.list import ListView
 
-# Create your views here.
+from noticias.models import Noticia
+
+
+class NoticiaListView(ListView):
+    model = Noticia
+    template_name = "listar.html"

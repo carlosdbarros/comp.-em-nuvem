@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v3.8.5">
+</head>
+
+<body>
+    <main role="main">
+        <h1>Notícias</h1> <hr />
+
+        {% for noticia in object_list %}
+            <div>
+                <h3>{{ noticia.titulo }}</h3>
+                <p>{{ noticia.conteudo }}</p>
+            </div>
+        {% empty %}
+            <p>Aoba... bão?</p>
+        {% endfor %}
+    </main>
+</body>
+
+</html>
