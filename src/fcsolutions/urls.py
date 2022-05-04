@@ -19,13 +19,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
 
-from noticias.views import NoticiaListView
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('noticias/', NoticiaListView.as_view(), name='listar-noticias'),
-    path('', RedirectView.as_view(url='/noticias', permanent=False), name='home'),
+    path('', RedirectView.as_view(url='/admin', permanent=False), name='home'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
